@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Voting</title>
+  </head>
+  <body>
+    <h1>투표결과</h1>
+    <!--%=는 보여지는 부분에 %는 안보이는 부분  -->
+    <% @list.each do |row|%>
+      <p><%= row[0] %>님은 <%= row[1]%>에 투표함</p>
+    <% end %>
+    <hr><hr>
+    <% @count.each do |row|%>
+      <p><%= row[0] %>시간에 투표한 사람 : <%= row[1]%>명</p>
+    <% end %>
+  </body>
+</html>
